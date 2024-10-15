@@ -1,0 +1,5 @@
+.venv
+data/PowerShellCorpus
+data/data.parquet
+eda/eda.ipynb
+src/notebooks/wandb
