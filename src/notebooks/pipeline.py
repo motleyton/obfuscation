@@ -1,5 +1,3 @@
-import logging
-
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -16,7 +14,6 @@ class Pipeline:
         self.vectorizer = TfidfVectorizer(analyzer='char')
         wandb.init(project='obfuscation', reinit=True)
         self.logger = logging.getLogger(__name__)
-        logging.basicConfig(level=logging.INFO)
 
     def _load_data(self):
         self.data = pd.read_parquet(self.config.data_path)
